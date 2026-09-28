@@ -1,0 +1,30 @@
+/**
+ * Fótur.
+ */
+
+footer {
+  display: grid;
+  justify-items: center;
+  padding: var(--spacing-double);
+  text-align: center;
+  background-color: var(--color-accent);
+  border-top: var(--border-width-thick) solid var(--color-border);
+}
+
+footer .content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter);
+  width: var(--width-offset);
+  max-width: var(--max-width);
+}
+
+footer ul {
+  list-style: none;
+}
+
+@media (width >= 700px) {
+  footer .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

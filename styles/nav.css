@@ -1,0 +1,47 @@
+/**
+ * Valmynd er á síðu en þegar skrunað niður
+ * festist hún við topp á síðu og eltir.
+ */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-nav);
+  padding: var(--spacing) var(--spacing) var(--spacing-double);
+  overflow: hidden;
+  background-color: var(--color-background);
+  border-bottom: var(--border-width-thick) solid var(--color-border);
+}
+
+nav ul {
+  display: grid;
+  gap: var(--spacing-double);
+  justify-content: center;
+  width: 100%;
+  overflow: auto;
+  list-style: none;
+}
+
+nav ul li {
+  font-size: var(--font-size-nav);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+nav strong {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+@media (width >= 500px) {
+  nav ul li {
+    font-size: var(--font-size-nav-large);
+  }
+}

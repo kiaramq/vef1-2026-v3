@@ -1,0 +1,9 @@
+.textasida {
+  display: grid;
+  gap: var(--spacing-double);
+}
+
+.textasida img {
+  max-width: 100%;
+  height: auto;
+}

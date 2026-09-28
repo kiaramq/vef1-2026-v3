@@ -1,0 +1,49 @@
+/**
+ * Grunnuppsetning síðu með CSS grid.
+ */
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "skip"
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: auto auto auto 1fr auto;
+  gap: var(--spacing-triple);
+  min-height: 100vh;
+  margin-top: var(--spacing);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: var(--gutter);
+  width: var(--width-offset);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+main > * {
+  grid-column: 1 / -1;
+}
+
+.wrapper > header {
+  grid-area: header;
+}
+
+.wrapper > .sr-only {
+  grid-area: skip;
+}
+
+.wrapper > nav {
+  grid-area: nav;
+}
+
+.wrapper > main {
+  grid-area: main;
+}
+
+.wrapper > footer {
+  grid-area: footer;
+}

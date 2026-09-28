@@ -1,0 +1,37 @@
+/**
+ * Kort á forsíðu.
+ */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter);
+}
+
+.card {
+  display: grid;
+  gap: var(--spacing-double);
+}
+
+.card h2 {
+  font-size: var(--font-size-card-title);
+}
+
+.card .content {
+  display: grid;
+  gap: var(--spacing-double);
+}
+
+.card .image img {
+  display: block;
+  width: 100%;
+  height: var(--card-image-height);
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+@media (width >= 700px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
