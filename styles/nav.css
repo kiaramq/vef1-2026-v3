@@ -14,7 +14,7 @@ nav {
 }
 
 nav ul {
-  display: grid;
+  display: flex;
   gap: var(--spacing-double);
   justify-content: center;
   width: 100%;
